@@ -1,0 +1,33 @@
+/* conainer {
+    text-align: center;
+} */
+#background {
+    background-image: url(../images/crowd2.jpg);
+    background-color: black;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1 {
+    font-size: 250px;
+    text-align: center;
+    font-family: 'Fugaz One', cursive;
+    font: bold;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 150%;
+
+}
+
+h2 {
+    text-align: center;
+}
+
+.container {
+    font-size: 250px;
+    background-color: black;
+    /* background-color: rgba(255,255,255,0.5); */
+    
+}
+
