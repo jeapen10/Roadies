@@ -11,6 +11,11 @@ div {
     background-attachment: fixed;
     background-size: cover;
 }
+#logo {
+    height: 100px;
+    width: 100px;
+    position: fixed;
+}
 
 #name-title {
     font-size: 50px;
