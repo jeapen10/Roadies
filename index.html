@@ -16,14 +16,30 @@
     <!-- Link our own CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
+
+    <!-- Google fonts  -->
+<link href="https://fonts.googleapis.com/css?family=Bangers|Fugaz+One" rel="stylesheet">
+
     <!-- Link to jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
 </head>
 
+<header>
+    <div class="tabs is-right">
+        <ul>
+          <li class="is-active"><a>Pictures</a></li>
+          <li><a>Music</a></li>
+          <li><a>Videos</a></li>
+          <li><a>Contact Us</a></li>
+        </ul>
+    </div>
+</header>
+
 <body>
-    <section class="hero is-medium is-primary is-bold">
+  <div>
+    <section class="hero is-medium is-primary is-bold" id="background">
         <div class="hero-body">
             <div class="container">
                 <h1 class="title">
@@ -33,33 +49,33 @@
                     Watch your favorite performers right in your backyard!
                 </h2>
             </div>
-        </div>.
+        </div>
+
 
         <div class="tile is-ancestor">
                 <div class="tile is-vertical is-8">
                   <div class="tile">
                     <div class="tile is-parent is-vertical">
                       <article class="tile is-child notification is-primary">
-                        <p class="title">Vertical...</p>
-                        <p class="subtitle">Top tile</p>
+                        <p class="title">Find the show for you here</p>
+                        <!-- <p class="subtitle">Top tile</p> -->
 
                         <div class="row" id="dataEntryForm">
                             <div class="col-lg-12">
                               <div class="form-group">
-                                <label for="name" id="nameTitle">Band Name</label>
-                                <input type="search" class="form-control" name="name" id="name" aria-describedby="emailHelpId" placeholder="">
+                                <label for="name" id="nameTitle">Performer Name</label>
+                                <input type="search" class="form-control" name="name" id="name" aria-describedby="emailHelpId" placeholder="Search for artists or concerts">
                                 <br>
                                 <label for="date" id="dateTitle">Date</label>
                                 <input type="date" class="form-control" name="date" id="date" aria-describedby="emailHelpId" placeholder="">
                                 <small id="startHelpText" class="form-text text-muted">(DD/MM/YYYY)</small>
                                 <br>
-                                <button type="button" name="search" id="search" class="btn btn-primary btn-lg">Search</button>
+                                <button type="button" name="search" id="search" class="btn btn-primary btn-lg">Find tickets</button>
                               </div>
                             </div>
                           </div>
-
-
                       </article>
+
                       <!-- <article class="tile is-child notification is-warning">
                         <p class="title">...tiles</p>
                         <p class="subtitle">Bottom tile</p>
@@ -67,11 +83,19 @@
                     </div>
                     <div class="tile is-parent">
                       <article class="tile is-child notification is-info">
-                        <p class="title">Middle tile</p>
-                        <p class="subtitle">With an image</p>
+                        <p class="title">Discover the best live music</p>
+                        <p class="subtitle">For your own music taste</p>
                         <figure class="image is-4by3">
+                           <p class="title">YouTube Videos</p>
+                          <p class="subtitle">of your fav band</p>
+                          <iframe src="https://www.youtube.com/embed/videoseries?" + " " + frameborder="0" height="300" width="400"></iframe>
+                          <br>
+                          <iframe src="https://www.youtube.com/embed/videoseries?" + " " + frameborder="0" height="300" width="400"></iframe>
+                          <br>
+                          <iframe src="https://www.youtube.com/embed/videoseries?" + " " + frameborder="0" height="300" width="400"></iframe>
+                        <!-- <figure class="image is-4by3">
                           <img src="assets/images/concert.jpeg">
-                        </figure>
+                        </figure> -->
                       </article>
                     </div>
                   </div>
@@ -85,14 +109,24 @@
                     </article>
                   </div>
                 </div>
+
+                <div class="tile is-parent" style="background-color: blueviolet">
+                  <article class="tile is-child notification" style="background-color: blueviolet">
+                    <p class="title">See what shows others have seen near you</p>
+                    <p class="subtitle">Recent searches</p>
+                    <!-- <header>
+                      <img src="assets/images/youtube.jpg">
+                    </header> -->
+                    <div class="content"></div>
+
                 <div class="tile is-parent">
                   <article class="tile is-child notification is-success">
                     <div class="content">
                       <p class="title">Tall tile</p>
                       <p class="subtitle">With even more content</p>
                       <div class="content" id = "search-container">
+
                         <!-- Content -->
-                      </div>
                     </div>
                   </article>
                 </div>
@@ -101,6 +135,9 @@
 
 
     </div>
+<!-- 
+  </div> -->
+
 
 
 
@@ -108,9 +145,10 @@
 
     
 
-    <!-- <script async defer src="https://apis.google.com/js/api.js" 
+    <script async defer src="https://apis.google.com/js/api.js" 
         onload="this.onload=function(){};handleClientLoad()" 
-        onreadystatechange="if (this.readyState === 'complete') this.onload()"></script> -->
+        onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
+
 
 </body>
 
