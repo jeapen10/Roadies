@@ -18,8 +18,7 @@
 
 
     <!-- Google fonts  -->
-<link href="https://fonts.googleapis.com/css?family=Bangers|Fugaz+One" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Rakkas" rel="stylesheet">
     <!-- Link to jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -42,6 +41,7 @@
 <body>
   <div>
     <section class="hero is-medium" id="background">
+
         <div class="hero-body">
             <div class="container has-text-black">
                 <p id="name-title">
@@ -54,7 +54,7 @@
         </div>
 
 
-        <div class="tile is-ancestor">
+        <div class="tile is-ancestor has-text-centered">
                 <div class="tile is-vertical is-8">
                   <div class="tile">
                     <div class="tile is-parent is-vertical">
@@ -71,7 +71,11 @@
                                 <input type="date" class="form-control" name="date" id="date" aria-describedby="emailHelpId" placeholder="">
                                 <small id="startHelpText" class="form-text text-muted">(DD/MM/YYYY)</small>
                                 <br>
+<<<<<<< HEAD
                                 <button type="button" name="search" id="search" class="btn btn-primary btn-lg">Find shows</button>
+=======
+                                <button type="button" name="search" id="search" class="btn btn-primary btn-lg">Find</button>
+>>>>>>> 74215677edbada8b7bf09c3abe2c771a0b310ece
                               </div>
                             </div>
                           </div>
@@ -84,11 +88,17 @@
                       <article class="tile is-child notification is-info"  style="background-color: rgba(102, 204, 255, 0.5)">
                         <p class="title">Discover the best live music</p>
                         <p class="subtitle">For your own music taste</p>
+<<<<<<< HEAD
                           <iframe src="https://www.youtube.com/embed/videoseries?" + " " + frameborder="0" height="300" width="400"></iframe>
+=======
+                          <p class="title">YouTube Videos</p>
+                          
+                          <iframe id = "youTube1" width="400" height="300" src="https://www.youtube.com/embed/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+>>>>>>> 74215677edbada8b7bf09c3abe2c771a0b310ece
                           <br>
-                          <iframe src="https://www.youtube.com/embed/videoseries?" + " " + frameborder="0" height="300" width="400"></iframe>
+                          <iframe id = "youTube2" width="400" height="300" src="https://www.youtube.com/embed/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                           <br>
-                          <iframe src="https://www.youtube.com/embed/videoseries?" + " " + frameborder="0" height="300" width="400"></iframe>
+                          <iframe id= "youTube3" width="400" height= "300" src="https://www.youtube.com/embed/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                         <!-- <figure class="image is-4by3">
                           <img src="assets/images/concert.jpeg">
                         </figure> -->
@@ -99,9 +109,31 @@
 
                 <div class="tile is-parent">
                   <article class="tile is-child notification is-primary" style="background-color: rgba(138,43,226, 0.5)">
+<<<<<<< HEAD
                     <p class="title">Upcoming Shows</p>                   
                   <div class="content"></div>
                 </div>
+=======
+                    <p class="title">Your Performer's Info</p>
+                   
+                    <!-- <header>
+                      <img src="assets/images/youtube.jpg">
+                    </header> -->
+                    <div class="content"></div>
+
+                <!-- <div class="tile is-parent">
+                  <article class="tile is-child notification is-success">
+                    <div class="content">
+                      <p class="title">Tall tile</p>
+                      <p class="subtitle">With even more content</p>
+                      <div class="content" id = "search-container"> -->
+
+                        <!-- Content -->
+                    <!-- </div>
+                  </article>
+                </div> -->
+              </div>
+>>>>>>> 74215677edbada8b7bf09c3abe2c771a0b310ece
     </section>
 
     </div>
@@ -120,12 +152,6 @@
 
 
     <script src="assets/javascript/app.js"></script>
-
-    
-
-    <script async defer src="https://apis.google.com/js/api.js" 
-        onload="this.onload=function(){};handleClientLoad()" 
-        onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
 
 
 </body>

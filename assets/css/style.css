@@ -1,6 +1,10 @@
 /* conainer {
     text-align: center;
 } */
+
+div {
+    font-family: 'Rakkas', cursive;
+}
 #background {
     background-image: url(../images/crowd2.jpg);
     background-color: black;
