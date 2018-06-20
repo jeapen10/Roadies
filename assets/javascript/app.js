@@ -25,16 +25,19 @@ $(document).ready(function () {
 
             var videoId3 = response.items[2].id.videoId
             $('#youTube3').attr('src', "https://www.youtube.com/embed/" + videoId3)
-            // <iframe width="560" height="315" id="youtubeVid" src="https://www.youtube.com/embed/I2bBZvSPpOo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            // $("#youtubeVid").attr("src", "https://www.youtube.com/embed/" + videoId)
-            // response
-            // https://www.youtube.com/playlist?list= <-- This is the structure of the playlist page in youtube
+            
         });
         // search()
 
 
 
     })
+
+    jQuery.ajaxPrefilter(function(options) {
+        if (options.crossDomain && jQuery.support.cors) {
+            options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
+        }
+    });
 })
 
 
