@@ -16,8 +16,13 @@
     <!-- Link our own CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
+
     <!-- Google fonts  -->
 <link href="https://fonts.googleapis.com/css?family=Bangers|Fugaz+One" rel="stylesheet">
+
+    <!-- Link to jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 
 </head>
 
@@ -104,6 +109,7 @@
                     </article>
                   </div>
                 </div>
+
                 <div class="tile is-parent" style="background-color: blueviolet">
                   <article class="tile is-child notification" style="background-color: blueviolet">
                     <p class="title">See what shows others have seen near you</p>
@@ -112,6 +118,14 @@
                       <img src="assets/images/youtube.jpg">
                     </header> -->
                     <div class="content"></div>
+
+                <div class="tile is-parent">
+                  <article class="tile is-child notification is-success">
+                    <div class="content">
+                      <p class="title">Tall tile</p>
+                      <p class="subtitle">With even more content</p>
+                      <div class="content" id = "search-container">
+
                         <!-- Content -->
                     </div>
                   </article>
@@ -121,7 +135,21 @@
 
 
     </div>
-  </div>
+<!-- 
+  </div> -->
+
+
+
+
+    <script src="assets/javascript/app.js"></script>
+
+    
+
+    <script async defer src="https://apis.google.com/js/api.js" 
+        onload="this.onload=function(){};handleClientLoad()" 
+        onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
+
+
 </body>
 
 </html>
