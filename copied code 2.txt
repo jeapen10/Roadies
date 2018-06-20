@@ -18,7 +18,8 @@
 
 
     <!-- Google fonts  -->
-    <link href="https://fonts.googleapis.com/css?family=Bangers|Rakkas" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Bangers|Fugaz+One" rel="stylesheet">
+
     <!-- Link to jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -26,8 +27,6 @@
 </head>
 
 <header>
-    <img id="logo" src="assets/images/logo.png" align="bottom" alt="logo">
-    
     <div class="tabs is-right">
         <ul>
           <li class="is-active"><a>Pictures</a></li>
@@ -41,7 +40,6 @@
 <body>
   <div>
     <section class="hero is-medium" id="background">
-
         <div class="hero-body">
             <div class="container has-text-black">
                 <p id="name-title">
@@ -54,7 +52,7 @@
         </div>
 
 
-        <div class="tile is-ancestor has-text-centered">
+        <div class="tile is-ancestor">
                 <div class="tile is-vertical is-8">
                   <div class="tile">
                     <div class="tile is-parent is-vertical">
@@ -71,26 +69,28 @@
                                 <input type="date" class="form-control" name="date" id="date" aria-describedby="emailHelpId" placeholder="">
                                 <small id="startHelpText" class="form-text text-muted">(DD/MM/YYYY)</small>
                                 <br>
-                                <button type="button" name="search" id="search" class="btn btn-primary btn-lg">Find shows</button>
+                                <button type="button" name="search" id="search" class="btn btn-primary btn-lg">Find tickets</button>
                               </div>
                             </div>
                           </div>
                       </article>
+
+                      <!-- <article class="tile is-child notification is-warning">
+                        <p class="title">...tiles</p>
+                        <p class="subtitle">Bottom tile</p>
+                      </article> -->
                     </div>
-
-
-
                     <div class="tile is-parent">
                       <article class="tile is-child notification is-info"  style="background-color: rgba(102, 204, 255, 0.5)">
                         <p class="title">Discover the best live music</p>
                         <p class="subtitle">For your own music taste</p>
                           <p class="title">YouTube Videos</p>
                           
-                          <iframe id = "youTube1" width="400" height="300" src="https://www.youtube.com/embed/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                          <iframe src="https://www.youtube.com/embed/videoseries?" + " " + frameborder="0" height="300" width="400"></iframe>
                           <br>
-                          <iframe id = "youTube2" width="400" height="300" src="https://www.youtube.com/embed/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                          <iframe src="https://www.youtube.com/embed/videoseries?" + " " + frameborder="0" height="300" width="400"></iframe>
                           <br>
-                          <iframe id= "youTube3" width="400" height= "300" src="https://www.youtube.com/embed/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                          <iframe src="https://www.youtube.com/embed/videoseries?" + " " + frameborder="0" height="300" width="400"></iframe>
                         <!-- <figure class="image is-4by3">
                           <img src="assets/images/concert.jpeg">
                         </figure> -->
@@ -101,8 +101,10 @@
 
                 <div class="tile is-parent">
                   <article class="tile is-child notification is-primary" style="background-color: rgba(138,43,226, 0.5)">
-                    <p class="title">Upcoming Shows</p>                   
-                  <div class="content"></div>
+                    <p class="title">See what shows others have seen near you</p>
+                    <p class="subtitle">Recent searches</p>
+                   
+                <div class="content"></div>
                 </div>
     </section>
 
@@ -122,6 +124,12 @@
 
 
     <script src="assets/javascript/app.js"></script>
+
+    
+
+    <script async defer src="https://apis.google.com/js/api.js" 
+        onload="this.onload=function(){};handleClientLoad()" 
+        onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
 
 
 </body>
