@@ -85,14 +85,13 @@
                       <article class="tile is-child notification is-info">
                         <p class="title">Discover the best live music</p>
                         <p class="subtitle">For your own music taste</p>
-                        <figure class="image is-4by3">
                            <p class="title">YouTube Videos</p>
                           <p class="subtitle">of your fav band</p>
-                          <iframe src="https://www.youtube.com/embed/videoseries?" + " " + frameborder="0" height="300" width="400"></iframe>
+                          <iframe id = "youTube1" width="560" height="315" src="https://www.youtube.com/embed/kbMqWXnpXcA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                           <br>
-                          <iframe src="https://www.youtube.com/embed/videoseries?" + " " + frameborder="0" height="300" width="400"></iframe>
+                          <iframe id = "youTube2" width="560" height="315" src="https://www.youtube.com/embed/kbMqWXnpXcA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                           <br>
-                          <iframe src="https://www.youtube.com/embed/videoseries?" + " " + frameborder="0" height="300" width="400"></iframe>
+                          <iframe id= "youTube3" width="560" height="315" src="https://www.youtube.com/embed/kbMqWXnpXcA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                         <!-- <figure class="image is-4by3">
                           <img src="assets/images/concert.jpeg">
                         </figure> -->
@@ -101,8 +100,18 @@
                   </div>
                   <div class="tile is-parent">
                     <article class="tile is-child notification is-danger">
-                      <p class="title">Wide tile</p>
-                      <p class="subtitle">Aligned with the right tile</p>
+                      <p class="title">Search History</p>
+                      <!-- <p class="subtitle">Aligned with the right tile</p> -->
+                      <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Recent Searches
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                          <!-- <button class="dropdown-item" type="button"></button>
+                          <button class="dropdown-item" type="button">Another action</button>
+                          <button class="dropdown-item" type="button">Something else here</button> -->
+                        </div>
+                      </div>
                       <div class="content">
                         <!-- Content -->
                       </div>
@@ -145,9 +154,9 @@
 
     
 
-    <script async defer src="https://apis.google.com/js/api.js" 
+    <!-- <script async defer src="https://apis.google.com/js/api.js" 
         onload="this.onload=function(){};handleClientLoad()" 
-        onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
+        onreadystatechange="if (this.readyState === 'complete') this.onload()"></script> -->
 
 
 </body>
