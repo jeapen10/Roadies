@@ -18,9 +18,7 @@ $(document).ready(function () {
         // console.log(snapshot);
         console.log(snapshotToArray(snapshot));
 
-        for (var item in snapshot.val()) {
-            console.log(item)
-        }
+    
 
         function snapshotToArray(snapshot) {
             var returnArr = [];
@@ -33,10 +31,14 @@ $(document).ready(function () {
             });
         
             return returnArr;
-
-            $("#history").text("<li>" + returnArr + "</li>")
            
         };
+
+        bandArray = snapshotToArray(snapshot)
+
+        for(var i = 0; i < bandArray.length; i++) {
+            $("#history").prepend("<li>" + bandArray[i] + "<li>");
+        }
         
 
     })
