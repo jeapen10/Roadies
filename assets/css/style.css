@@ -57,6 +57,12 @@ h2 {
     text-align: left;
     font-size: 20px;
 }
+  
+.tile-is-parent.is-scrollable tbody {
+    overflow-y: scroll;
+    width: auto;
+    position: absolute;
+  }
 
 .container {
     text-align: left;

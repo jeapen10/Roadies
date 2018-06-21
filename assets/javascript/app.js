@@ -1,5 +1,4 @@
 $(document).ready(function () {
-<<<<<<< HEAD
 
     // Initialize Firebase
     var config = {
@@ -45,9 +44,6 @@ $(document).ready(function () {
     })
 
 
-=======
-    
->>>>>>> 3bce1e530fab205d40f12b1c47c2693657ae67aa
     var apiKEY = "AIzaSyDYm1_qkLonvPsRYs9N1k-cwvEIwVATWkY"
     $(document).on("click", "#search", function () {
 
