@@ -1,4 +1,5 @@
 $(document).ready(function () {
+<<<<<<< HEAD
 
     // Initialize Firebase
     var config = {
@@ -44,6 +45,9 @@ $(document).ready(function () {
     })
 
 
+=======
+    
+>>>>>>> 3bce1e530fab205d40f12b1c47c2693657ae67aa
     var apiKEY = "AIzaSyDYm1_qkLonvPsRYs9N1k-cwvEIwVATWkY"
     $(document).on("click", "#search", function () {
 
@@ -63,20 +67,47 @@ $(document).ready(function () {
             url: queryURL,
             method: "GET"
         }).then(function (response) {
-            console.log(response)
-            console.log(response.items[0].snippet.title)
-            console.log(response.items[0].id.videoId)
+           
 
-            var videoId1 = response.items[0].id.videoId
-            $('#youTube1').attr('src', "https://www.youtube.com/embed/" + videoId1)
+            var videoId1 = "https://www.youtube.com/embed/" + response.items[0].id.videoId;
+            $('#youTube').attr('src', videoId1);
+            var videoId2 = "https://www.youtube.com/embed/" + response.items[1].id.videoId;
+            var videoId3 = "https://www.youtube.com/embed/" + response.items[2].id.videoId;
+            
 
-            var videoId2 = response.items[1].id.videoId
-            $('#youTube2').attr('src', "https://www.youtube.com/embed/" + videoId2)
+            $("#next").on("click", function() {
+                console.log(videoId1);
+                console.log($('#youTube').attr('src'))
 
-            var videoId3 = response.items[2].id.videoId
-            $('#youTube3').attr('src', "https://www.youtube.com/embed/" + videoId3)
+                if (videoId1 === $('#youTube').attr('src')) {
+                    $('#youTube').attr('src', videoId2)
+                } else if 
+                (videoId2 === $('#youTube').attr('src')) {
+                    $('#youTube').attr('src', videoId3)
+                } else if
+                (videoId3 === $('#youTube').attr('src')) {
+                    $('#youTube').attr('src', videoId1)
+                } else
+                    return;
+            })
 
-        });
+            $("#previous").on("click", function() {
+                if (videoId3 === $('#youTube').attr('src')) {
+                    $('#youTube').attr('src', videoId2)
+                } else if 
+                (videoId2 === $('#youTube').attr('src')) {
+                    $('#youTube').attr('src', videoId1)
+                } else if 
+                (videoId1 === $('#youTube').attr('src')) {
+                    $('#youTube').attr('src', videoId3)
+                } else
+                    return;
+
+            })
+           
+        })
+
+        
         // search()
         var apiKeyTm = "ABJmmwT5erF9dGVuWEGiEhDZNsQojazj";
         var queryURLTm =
@@ -92,7 +123,7 @@ $(document).ready(function () {
             url: queryURLTm,
             method: "GET"
         }).done(function (json) {
-            console.log(json);
+            
             var events = json._embedded.events;
 
             $(".is-success").empty();
@@ -111,11 +142,7 @@ $(document).ready(function () {
                 var venueState = events[i]._embedded.venues[0].state.name;
                 var venueCountry = events[i]._embedded.venues[0].country.name;
                 var seatMap = events[i].url;
-                console.log(bandName);
-                console.log(bandImage);
-                console.log(date);
-                console.log(venue);
-                console.log(venueAddress);
+                
 
                 $(".is-success").append("<p>Venue: " + venue + "</p>");
                 $(".is-success").append("<p>Date: " + date + "</p>");
@@ -156,6 +183,9 @@ $(document).ready(function () {
 
     });
 })
+
+    
+
 
 
 
