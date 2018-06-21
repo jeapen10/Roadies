@@ -29,8 +29,9 @@
 <header>
     <img id="logo" src="assets/images/logo.png" align="bottom" alt="logo">
     
-    <div class="tabs is-right">
+    <div class="tabs is-right" id="nav">
         <ul>
+
           <li class="is-active"><a href="index.html">Home</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="about.html">About Us</a></li>
@@ -69,11 +70,29 @@
                       <label for="name" id="nameTitle">Performer Name</label>
                       <input type="search" class="form-control" name="name" id="name" aria-describedby="emailHelpId" placeholder="Search for artists or concerts">
                       <br>
-                      <label for="date" id="dateTitle">Date</label>
-                      <input type="date" class="form-control" name="date" id="date" aria-describedby="emailHelpId" placeholder="">
-                      <small id="startHelpText" class="form-text text-muted">(DD/MM/YYYY)</small>
                       <br>
                       <button type="button" name="search" id="search" class="btn btn-primary btn-lg">Find shows</button>
+                      <div class = "history">
+                         <br> 
+                        <br>
+                        <div class="dropdown" >
+                              <button class="btn btn-primary dropdown-toggle" type="button" id="history" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Search History
+                              </button>
+                              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#"></a>
+                                <a class="dropdown-item" href="#"></a>
+                                <a class="dropdown-item" href="#"></a>
+                              </div>
+                            </div>
+
+
+                        <!-- <form>
+                          <ul id="history">
+
+                          </ul>
+                        </form> -->
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -96,7 +115,7 @@
                 <iframe id="youTube3" width="400" height="300" src="https://www.youtube.com/embed/" frameborder="0" allow="autoplay; encrypted-media"
                   allowfullscreen></iframe> -->
                 
-                <button id="previous">Previous</button>
+                <button id="previous">Previous</button> 
                 <button id="next">Next</button>
                 <!-- <figure class="image is-4by3">
                           <img src="assets/images/concert.jpeg">
@@ -138,6 +157,7 @@
 
 
     <script src="assets/javascript/app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
 
 
 </body>
