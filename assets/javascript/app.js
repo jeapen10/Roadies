@@ -1,8 +1,39 @@
 $(document).ready(function () {
 
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyCUM8kkq5sib8PGpDP-DsqzptMCNO9uGzk",
+        authDomain: "bands-in-town.firebaseapp.com",
+        databaseURL: "https://bands-in-town.firebaseio.com",
+        projectId: "bands-in-town",
+        storageBucket: "bands-in-town.appspot.com",
+        messagingSenderId: "705988577969"
+    };
+    firebase.initializeApp(config);
+
+    var database = firebase.database();
+
+    database.ref().on("value", function (snapshot) {
+        console.log("printing snapshot")
+        console.log(snapshot.val());
+
+        var select = $("#name");
+
+        for (var i = 0; i < snapshot.length; i++) {
+            var opt = snapshot[i].val()
+            var el = $("<option>");
+            el.textContent = opt;
+            el.value = opt;
+            select.appendChild(el);
+        }
+    })
+
+
     var apiKEY = "AIzaSyDYm1_qkLonvPsRYs9N1k-cwvEIwVATWkY"
     $(document).on("click", "#search", function () {
+
         var youtubeVideo = $("#name").val().trim();
+        database.ref().push(youtubeVideo)
         var str = youtubeVideo.replace(/\s+/g, "");
         console.log(str);
 
