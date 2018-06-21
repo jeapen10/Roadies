@@ -12,6 +12,12 @@ div {
     background-size: cover;
 }
 
+/* #musicSection {
+    overflow-y: scroll;
+    width: auto;
+    height: 300px;
+    
+  } */
 
 #logo {
     width: 70px;
@@ -40,11 +46,19 @@ div {
     padding: 50px;
 }
 
-
-#nav {
-    background: linear-gradient(to left, #f52516, #f5af2e);
-    color: #cfcaca;
+#faq-title {
+    font-size: 70px;
+    text-align: left;
+    font-family: 'Black Ops One', cursive;
+    font: bold;
+    background: -webkit-linear-gradient(black, gray);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 100%;
+    padding: 50px;
+    margin-bottom: 10px;
 }
+
  
 #footer {
     background: linear-gradient(to left, #f52516, #f5af2e);
@@ -83,4 +97,12 @@ h2 {
 
 #youTube3 {
     margin: 10px;
+}
+
+.tile-faq {
+    background-color: black;
+    font-size: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 100px;
 }

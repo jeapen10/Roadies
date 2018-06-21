@@ -37,7 +37,7 @@ $(document).ready(function () {
         bandArray = snapshotToArray(snapshot)
 
         for(var i = 0; i < bandArray.length; i++) {
-            $("#history").prepend("<li>" + bandArray[i] + "<li>");
+            $("#history").prepend("<a class='dropdown-item'>" + bandArray[i] + "</a>");
         }
         
 

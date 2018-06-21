@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Roadies</title>
+  <title>Home</title>
 
   <!-- Bulma CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
@@ -18,25 +18,28 @@
   <link rel="stylesheet" href="assets/css/style.css">
 
 
-    <!-- Google fonts  -->
-    <link href="https://fonts.googleapis.com/css?family=Bangers|Rakkas|Black+Ops+One" rel="stylesheet">
-    <!-- Link to jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Google fonts  -->
+  <link href="https://fonts.googleapis.com/css?family=Bangers|Rakkas|Black+Ops+One" rel="stylesheet">
+  <!-- Link to jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
 </head>
 
 <header>
+
+
     <img id="logo" src="assets/images/logo.png" align="bottom" alt="logo">
     
     <div class="tabs is-right" id="nav">
         <ul>
-          <li class="is-active" ><a>Home</a></li>
-          <li><a>FAQ</a></li>
-          <li><a>Sign Up</a></li>
-          <li><a>Contact Us</a></li>
+
+          <li class="is-active"><a href="index.html">Home</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="about.html">About Us</a></li>
         </ul>
     </div>
+
 </header>
 
 <body>
@@ -45,7 +48,7 @@
 
 
       <div class="hero-body">
-        <div class="container has-text-black" id= "siteTitle">
+        <div class="container has-text-black" id="siteTitle">
           <p id="name-title">
             The Roadies
           </p>
@@ -57,7 +60,7 @@
       </div>
 
 
-      <div class="tile is-ancestor has-text-centered">
+      <div class="tile is-ancestor has-text-centered musicSection">
         <div class="tile is-vertical is-8">
           <div class="tile">
             <div class="tile is-parent is-vertical">
@@ -72,21 +75,23 @@
                       <br>
                       <br>
                       <button type="button" name="search" id="search" class="btn btn-primary btn-lg">Find shows</button>
-                      <div class = "history">
-                         <br> 
+                      <div class="history">
                         <br>
-                        <div class="dropdown" >
-                              <button class="btn btn-primary dropdown-toggle" type="button" id="history" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Search History
-                              </button>
-                              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#"></a>
-                                <a class="dropdown-item" href="#"></a>
-                                <a class="dropdown-item" href="#"></a>
-                              </div>
+                        <br>
+                        <!-- <div class="row"> -->
+                          <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search History
+                            </button>
+                            <div class="dropdown-menu" id="history" aria-labelledby="dropdownMenuButton" role = "menu">
+                              <a class="dropdown-item" href="#"></a>
+                              <a class="dropdown-item" href="#"></a>
+                              <a class="dropdown-item" href="#"></a>
                             </div>
+                          </div>
+                        <!-- </div> -->
 
 
+                        
                         <!-- <form>
                           <ul id="history">
 
@@ -101,7 +106,7 @@
 
 
 
-            <div class="tile is-parent">
+            <div class="tile-is-parent">
               <article class="tile is-child notification is-info" style="background-color: rgba(102, 204, 255, 0.5)">
                 <p class="title">Discover the best live music</p>
                 <p class="subtitle">For your own music taste</p>
@@ -114,8 +119,8 @@
                 <br>
                 <iframe id="youTube3" width="400" height="300" src="https://www.youtube.com/embed/" frameborder="0" allow="autoplay; encrypted-media"
                   allowfullscreen></iframe> -->
-                
-                <button id="previous">Previous</button> 
+
+                <button id="previous">Previous</button>
                 <button id="next">Next</button>
                 <!-- <figure class="image is-4by3">
                           <img src="assets/images/concert.jpeg">
@@ -125,8 +130,8 @@
           </div>
         </div>
 
-        <div class="tile-is-parent">
-          <article class="tile is-child notification is-primary is-success" style="background-color: rgba(138,43,226, 0.5)">
+        <div class="tile is-parent">
+          <article class="tile is-child notification is-primary is-success" id="musicSection" style="background-color: rgba(138,43,226, 0.5)">
             <p class="title">Upcoming Shows</p>
             <div class="content"></div>
         </div>
@@ -137,8 +142,8 @@
     <footer>
 
 
-       
-      <div class="tabs is-centered" id= "footer">
+
+      <div class="tabs is-centered" id="footer">
         <ul>
           <li class="is-active">
             <a>App Links</a>
