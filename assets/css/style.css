@@ -11,13 +11,14 @@ div {
     background-attachment: fixed;
     background-size: cover;
 }
+
+
 #logo {
-    height: 100px;
-    width: 100px;
+    width: 70px;
     position: fixed;
 }
-
 #name-title {
+
     font-size: 50px;
     text-align: left;
     font-family: 'Fugaz One', cursive;
@@ -25,10 +26,38 @@ div {
     width: 100%;
     margin: 0;
     padding: 0;
-    
-
 }
 
+#siteTitle {
+    background: rgba(5, 5, 5, 0.9);
+    margin-right: 700px;
+   margin-left: 100px;
+   padding: 20px;
+}
+
+#nav {
+    background: linear-gradient(to left, #f52516, #f5af2e);
+    color: #cfcaca;
+}
+ 
+#footer {
+    background: linear-gradient(to left, #f52516, #f5af2e);
+    color: #cfcaca;
+}
+
+#name-title {
+    font-size: 72px;
+    background: -webkit-linear-gradient(#f5af2e, #f52516);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#name-subtitle {
+    font-size: 22px;
+    background: -webkit-linear-gradient(#f5af2e, #f52516);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 h2 {
     font-family: 'Fugaz One', cursive;
     text-align: left;
