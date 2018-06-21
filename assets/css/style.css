@@ -18,15 +18,25 @@ div {
 }
 
 #name-title {
-    font-size: 50px;
+    font-size: 60px;
     text-align: left;
-    font-family: 'Fugaz One', cursive;
+    font-family: 'Black Ops One', cursive;
     font: bold;
+    background: -webkit-linear-gradient(black, gray);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     width: 100%;
     margin: 0;
     padding: 0;
     
+}
 
+#name-subtitle {
+    font-family: 'Rakkas', cursive;
+    font-size: 25px;
+    background: -webkit-linear-gradient(black, gray);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 h2 {
