@@ -11,14 +11,14 @@ div {
     background-attachment: fixed;
     background-size: cover;
 }
+
+
 #logo {
-    height: 100px;
-    width: 100px;
+    width: 70px;
     position: fixed;
 }
-
 #name-title {
-    font-size: 60px;
+    font-size: 70px;
     text-align: left;
     font-family: 'Black Ops One', cursive;
     font: bold;
@@ -26,8 +26,8 @@ div {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     width: 100%;
-    margin: 0;
-    padding: 0;
+    padding: 50px;
+    margin-bottom: 10px;
     
 }
 
@@ -37,7 +37,20 @@ div {
     background: -webkit-linear-gradient(black, gray);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding: 50px;
 }
+
+
+#nav {
+    background: linear-gradient(to left, #f52516, #f5af2e);
+    color: #cfcaca;
+}
+ 
+#footer {
+    background: linear-gradient(to left, #f52516, #f5af2e);
+    color: #cfcaca;
+}
+
 
 h2 {
     font-family: 'Fugaz One', cursive;
@@ -54,3 +67,14 @@ h2 {
     
 }
 
+#youTube1 {
+    margin: 10px;
+} 
+
+#youTube2 {
+    margin: 10px;
+}
+
+#youTube3 {
+    margin: 10px;
+}

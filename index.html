@@ -2,19 +2,20 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Roadies</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Roadies</title>
 
-    <!-- Bulma CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
+  <!-- Bulma CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
 
-    <!-- Link our own CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Link our own CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
 
 
     <!-- Google fonts  -->
@@ -42,80 +43,98 @@
   <div>
     <section class="hero is-medium" id="background">
 
-        <div class="hero-body">
-            <div class="container has-text-black">
-                <p id="name-title">
-                    The Roadies
-                </p>
-                <h2 id="name-subtitle">
-                    Watch your favorite performers right in your backyard!
-                </h2>
-            </div>
+
+      <div class="hero-body">
+        <div class="container has-text-black" id= "siteTitle">
+          <p id="name-title">
+            The Roadies
+          </p>
+          <h2 id="name-subtitle">
+            Watch your favorite performers right in your backyard!
+          </h2>
+
         </div>
+      </div>
 
 
-        <div class="tile is-ancestor has-text-centered">
-                <div class="tile is-vertical is-8">
-                  <div class="tile">
-                    <div class="tile is-parent is-vertical">
-                      <article class="tile is-child notification is-primary" style="background-color: rgba(102, 255, 102, 0.5)">
-                        <p class="title">Find the show for you here</p>
+      <div class="tile is-ancestor has-text-centered">
+        <div class="tile is-vertical is-8">
+          <div class="tile">
+            <div class="tile is-parent is-vertical">
+              <article class="tile is-child notification is-primary" style="background-color: rgba(102, 255, 102, 0.5)">
+                <p class="title">Find the show for you here</p>
 
-                        <div class="row" id="dataEntryForm">
-                            <div class="col-lg-12">
-                              <div class="form-group">
-                                <label for="name" id="nameTitle">Performer Name</label>
-                                <input type="search" class="form-control" name="name" id="name" aria-describedby="emailHelpId" placeholder="Search for artists or concerts">
-                                <br>
-                                <label for="date" id="dateTitle">Date</label>
-                                <input type="date" class="form-control" name="date" id="date" aria-describedby="emailHelpId" placeholder="">
-                                <small id="startHelpText" class="form-text text-muted">(DD/MM/YYYY)</small>
-                                <br>
-                                <button type="button" name="search" id="search" class="btn btn-primary btn-lg">Find shows</button>
-                              </div>
-                            </div>
-                          </div>
-                      </article>
-                    </div>
-
-
-
-                    <div class="tile is-parent">
-                      <article class="tile is-child notification is-info"  style="background-color: rgba(102, 204, 255, 0.5)">
-                        <p class="title">Discover the best live music</p>
-                        <p class="subtitle">For your own music taste</p>
-                          <iframe id = "youTube1" width="400" height="300" src="https://www.youtube.com/embed/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                          <br>
-                          <iframe id = "youTube2" width="400" height="300" src="https://www.youtube.com/embed/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                          <br>
-                          <iframe id= "youTube3" width="400" height= "300" src="https://www.youtube.com/embed/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                        <!-- <figure class="image is-4by3">
-                          <img src="assets/images/concert.jpeg">
-                        </figure> -->
-                      </article>
+                <div class="row" id="dataEntryForm">
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                      <label for="name" id="nameTitle">Performer Name</label>
+                      <input type="search" class="form-control" name="name" id="name" aria-describedby="emailHelpId" placeholder="Search for artists or concerts">
+                      <br>
+                      <label for="date" id="dateTitle">Date</label>
+                      <input type="date" class="form-control" name="date" id="date" aria-describedby="emailHelpId" placeholder="">
+                      <small id="startHelpText" class="form-text text-muted">(DD/MM/YYYY)</small>
+                      <br>
+                      <button type="button" name="search" id="search" class="btn btn-primary btn-lg">Find shows</button>
                     </div>
                   </div>
                 </div>
+              </article>
+            </div>
 
-                <div class="tile is-parent">
-                  <article class="tile is-child notification is-primary" style="background-color: rgba(138,43,226, 0.5)">
-                    <p class="title">Upcoming Shows</p>                   
-                  <div class="content"></div>
-                </div>
+
+
+            <div class="tile is-parent">
+              <article class="tile is-child notification is-info" style="background-color: rgba(102, 204, 255, 0.5)">
+                <p class="title">Discover the best live music</p>
+                <p class="subtitle">For your own music taste</p>
+
+                <iframe id="youTube" width="400" height="300" src="https://www.youtube.com/embed/" frameborder="0" allow="autoplay; encrypted-media"
+                  allowfullscreen></iframe>
+                <br>
+                <!-- <iframe id="youTube2" width="400" height="300" src="https://www.youtube.com/embed/" frameborder="0" allow="autoplay; encrypted-media"
+                  allowfullscreen></iframe>
+                <br>
+                <iframe id="youTube3" width="400" height="300" src="https://www.youtube.com/embed/" frameborder="0" allow="autoplay; encrypted-media"
+                  allowfullscreen></iframe> -->
+                
+                <button id="previous">Previous</button>
+                <button id="next">Next</button>
+                <!-- <figure class="image is-4by3">
+                          <img src="assets/images/concert.jpeg">
+                        </figure> -->
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class="tile is-parent">
+          <article class="tile is-child notification is-primary is-success" style="background-color: rgba(138,43,226, 0.5)">
+            <p class="title">Upcoming Shows</p>
+            <div class="content"></div>
+        </div>
     </section>
 
     </div>
 
     <footer>
 
-        <div class="tabs is-centered">
-          <ul>
-            <li class="is-active"><a>App Links</a></li>
-            <li><a>About</a></li>
-            <li><a>Help</a></li>
-          </ul>
-        </div>
-        
+
+       
+      <div class="tabs is-centered" id= "footer">
+        <ul>
+          <li class="is-active">
+            <a>App Links</a>
+          </li>
+          <li>
+            <a>About</a>
+          </li>
+          <li>
+            <a>Help</a>
+          </li>
+        </ul>
+      </div>
+
+
     </footer>
 
 

@@ -1,8 +1,11 @@
 $(document).ready(function () {
-
+    
     var apiKEY = "AIzaSyDYm1_qkLonvPsRYs9N1k-cwvEIwVATWkY"
     $(document).on("click", "#search", function () {
         var youtubeVideo = $("#name").val().trim();
+        var str = youtubeVideo.replace(/\s+/g, "");
+        console.log(str);
+
 
         var queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&q=" +
             youtubeVideo + "&key=" + apiKEY + "&maxResults=3";
@@ -13,31 +16,124 @@ $(document).ready(function () {
             url: queryURL,
             method: "GET"
         }).then(function (response) {
-            console.log(response)
-            console.log(response.items[0].snippet.title)
-            console.log(response.items[0].id.videoId)
+           
 
-            var videoId1 = response.items[0].id.videoId
-            $('#youTube1').attr('src', "https://www.youtube.com/embed/" + videoId1)
+            var videoId1 = "https://www.youtube.com/embed/" + response.items[0].id.videoId;
+            $('#youTube').attr('src', videoId1);
+            var videoId2 = "https://www.youtube.com/embed/" + response.items[1].id.videoId;
+            var videoId3 = "https://www.youtube.com/embed/" + response.items[2].id.videoId;
+            
 
-            var videoId2 = response.items[1].id.videoId
-            $('#youTube2').attr('src', "https://www.youtube.com/embed/" + videoId2)
+            $("#next").on("click", function() {
+                console.log(videoId1);
+                console.log($('#youTube').attr('src'))
 
-            var videoId3 = response.items[2].id.videoId
-            $('#youTube3').attr('src', "https://www.youtube.com/embed/" + videoId3)
-            // <iframe width="560" height="315" id="youtubeVid" src="https://www.youtube.com/embed/I2bBZvSPpOo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            // $("#youtubeVid").attr("src", "https://www.youtube.com/embed/" + videoId)
-            // response
-            // https://www.youtube.com/playlist?list= <-- This is the structure of the playlist page in youtube
-        });
+                if (videoId1 === $('#youTube').attr('src')) {
+                    $('#youTube').attr('src', videoId2)
+                } else if 
+                (videoId2 === $('#youTube').attr('src')) {
+                    $('#youTube').attr('src', videoId3)
+                } else if
+                (videoId3 === $('#youTube').attr('src')) {
+                    $('#youTube').attr('src', videoId1)
+                } else
+                    return;
+            })
+
+            $("#previous").on("click", function() {
+                if (videoId3 === $('#youTube').attr('src')) {
+                    $('#youTube').attr('src', videoId2)
+                } else if 
+                (videoId2 === $('#youTube').attr('src')) {
+                    $('#youTube').attr('src', videoId1)
+                } else if 
+                (videoId1 === $('#youTube').attr('src')) {
+                    $('#youTube').attr('src', videoId3)
+                } else
+                    return;
+
+            })
+           
+        })
+
+        
         // search()
+        var apiKeyTm = "ABJmmwT5erF9dGVuWEGiEhDZNsQojazj";
+        var queryURLTm =
+            "https://app.ticketmaster.com/discovery/v2/events.json?keyword=" +
+            str +
+            "&apikey=" +
+            apiKeyTm +
+            "&maxResults=1";
+
+        console.log(queryURLTm);
+
+        $.ajax({
+            url: queryURLTm,
+            method: "GET"
+        }).done(function (json) {
+            
+            var events = json._embedded.events;
+
+            $(".is-success").empty();
+            var bandName = events[0].name;
+            var bandImage = events[0].images[0].url;
+            $(".is-success").append("<p><h1>" + bandName + "</h1></p>");
+            $(".is-success").append("<img src= " + bandImage + ">");
+            for (var i = 0; i < events.length; i++) {
 
 
 
-    })
+                var date = events[i].dates.start.localDate;
+                var venue = events[i]._embedded.venues[0].name;
+                var venueAddress = events[i]._embedded.venues[0].address.line1;
+                var venueCity = events[i]._embedded.venues[0].city.name;
+                var venueState = events[i]._embedded.venues[0].state.name;
+                var venueCountry = events[i]._embedded.venues[0].country.name;
+                var seatMap = events[i].url;
+                
+
+                $(".is-success").append("<p>Venue: " + venue + "</p>");
+                $(".is-success").append("<p>Date: " + date + "</p>");
+                $(".is-success").append(
+                    "<p>Address: " +
+                    venueAddress +
+                    "<br>" +
+                    venueCity +
+                    "<br>" +
+                    venueState +
+                    "</p>"
+                );
+                if ((venueState === false)) {
+                    $(".is-success").append("<p>Address: " + venueCountry + "</p>");
+
+                }
+                $(".is-success").append(
+                    "<p>" + "<a href=" + seatMap + ">Buy Tickets Now!</a>" + "</p>"
+                );
+                $(".is-success").append("<p>" + "___________________________________________________________" + "</p>");
+
+            }
+
+
+
+
+        })
+
+        jQuery.ajaxPrefilter(function (options) {
+            if (options.crossDomain && jQuery.support.cors) {
+                options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
+            }
+        });
+
+        //Ticketmaster JS----------------------------------------//
+
+
+
+    });
 })
 
-
+    
 
 
 
