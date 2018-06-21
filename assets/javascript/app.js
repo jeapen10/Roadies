@@ -27,17 +27,16 @@ $(document).ready(function () {
             $('#youTube3').attr('src', "https://www.youtube.com/embed/" + videoId3)
             
         });
-        // search()
 
 
 
     })
 
-    jQuery.ajaxPrefilter(function(options) {
-        if (options.crossDomain && jQuery.support.cors) {
-            options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
-        }
-    });
+    // jQuery.ajaxPrefilter(function(options) {
+    //     if (options.crossDomain && jQuery.support.cors) {
+    //         options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
+    //     }
+    // });
 })
 
 
