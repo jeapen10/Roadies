@@ -18,22 +18,28 @@ div {
     position: fixed;
 }
 #name-title {
-
-    font-size: 50px;
+    font-size: 70px;
     text-align: left;
-    font-family: 'Fugaz One', cursive;
+    font-family: 'Black Ops One', cursive;
     font: bold;
+    background: -webkit-linear-gradient(black, gray);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     width: 100%;
-    margin: 0;
-    padding: 0;
+    padding: 50px;
+    margin-bottom: 10px;
+    
 }
 
-#siteTitle {
-    background: rgba(5, 5, 5, 0.9);
-    margin-right: 700px;
-   margin-left: 100px;
-   padding: 20px;
+#name-subtitle {
+    font-family: 'Rakkas', cursive;
+    font-size: 25px;
+    background: -webkit-linear-gradient(black, gray);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 50px;
 }
+
 
 #nav {
     background: linear-gradient(to left, #f52516, #f5af2e);
@@ -45,19 +51,7 @@ div {
     color: #cfcaca;
 }
 
-#name-title {
-    font-size: 72px;
-    background: -webkit-linear-gradient(#f5af2e, #f52516);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
 
-#name-subtitle {
-    font-size: 22px;
-    background: -webkit-linear-gradient(#f5af2e, #f52516);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
 h2 {
     font-family: 'Fugaz One', cursive;
     text-align: left;
@@ -73,3 +67,14 @@ h2 {
     
 }
 
+#youTube1 {
+    margin: 10px;
+} 
+
+#youTube2 {
+    margin: 10px;
+}
+
+#youTube3 {
+    margin: 10px;
+}
