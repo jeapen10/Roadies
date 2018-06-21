@@ -15,17 +15,30 @@ $(document).ready(function () {
 
     database.ref().on("value", function (snapshot) {
         console.log("printing snapshot")
-        console.log(snapshot.val());
+        // console.log(snapshot);
+        console.log(snapshotToArray(snapshot));
 
-        var select = $("#name");
-
-        for (var i = 0; i < snapshot.length; i++) {
-            var opt = snapshot[i].val()
-            var el = $("<option>");
-            el.textContent = opt;
-            el.value = opt;
-            select.appendChild(el);
+        for (var item in snapshot.val()) {
+            console.log(item)
         }
+
+        function snapshotToArray(snapshot) {
+            var returnArr = [];
+        
+            snapshot.forEach(function(childSnapshot) {
+                var item = childSnapshot.val();
+                item.key = childSnapshot.key;
+        
+                returnArr.push(item);
+            });
+        
+            return returnArr;
+
+            $("#history").text("<li>" + returnArr + "</li>")
+           
+        };
+        
+
     })
 
 
@@ -34,6 +47,7 @@ $(document).ready(function () {
 
         var youtubeVideo = $("#name").val().trim();
         database.ref().push(youtubeVideo)
+
         var str = youtubeVideo.replace(/\s+/g, "");
         console.log(str);
 
