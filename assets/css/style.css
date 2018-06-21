@@ -12,6 +12,12 @@ div {
     background-size: cover;
 }
 
+/* #musicSection {
+    overflow-y: scroll;
+    width: auto;
+    height: 300px;
+    
+  } */
 
 #logo {
     width: 70px;
