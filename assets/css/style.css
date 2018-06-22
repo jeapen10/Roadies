@@ -19,50 +19,76 @@ div {
     
   } */
 
+#nav {
+    background: linear-gradient(to left, #f52516, #f5af2e);
+    color: #cfcaca;
+}
+
 #logo {
     width: 70px;
     position: fixed;
 }
 #name-title {
-    font-size: 70px;
-    text-align: left;
+    font-size: 72px;
+    text-align: center;   
     font-family: 'Black Ops One', cursive;
     font: bold;
-    background: -webkit-linear-gradient(black, gray);
+    background: -webkit-linear-gradient(#f5af2e, #f52516);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    width: 100%;
-    padding: 50px;
-    margin-bottom: 10px;
-    
+    /* width: 100%; */
+    /* padding: 50px; */
+    /* margin-bottom: 0px;
+    margin-top: 20px;     */
+    /* margin-top: 700px; */
+
 }
 
+ #title {
+     Background: rgba(2, 2, 2, 0.8);
+     border-radius: 15px 50px;
+     padding: 35px;
+     margin-bottom: 50px;
+     margin-top: 60px;
+     margin: 60px;
+     
+ }
 #name-subtitle {
     font-family: 'Rakkas', cursive;
+    text-align: center;
     font-size: 25px;
-    background: -webkit-linear-gradient(black, gray);
+    background: -webkit-linear-gradient(#f5af2e, #f52516);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    padding: 50px;
+  
+}
+
+#faq{
+    Background: rgba(2, 2, 2, 0.8);
+    border-radius: 15px 50px;
+    padding: 35px;
+    margin-bottom: 50px;
+    margin-top: 60px;
+    margin: 60px;
 }
 
 #faq-title {
     font-size: 70px;
-    text-align: left;
+    text-align: center;
     font-family: 'Black Ops One', cursive;
     font: bold;
-    background: -webkit-linear-gradient(black, gray);
+    background: -webkit-linear-gradient(#f5af2e, #f52516);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    width: 100%;
-    padding: 50px;
-    margin-bottom: 10px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    border-radius: 15px 50px;
 }
 
- 
-#footer {
-    background: linear-gradient(to left, #f52516, #f5af2e);
-    color: #cfcaca;
+#qa {
+    margin-left: 370px;
+    margin-bottom: 70px;
+
 }
 
 
@@ -71,6 +97,12 @@ h2 {
     text-align: left;
     font-size: 20px;
 }
+  
+.tile-is-parent.is-scrollable tbody {
+    overflow-y: scroll;
+    width: auto;
+    position: absolute;
+  }
 
 .container {
     text-align: left;
@@ -96,7 +128,7 @@ h2 {
 .tile-faq {
     background-color: black;
     font-size: 30px;
-    margin-left: 100px;
+    /* margin-left: 100px;
     margin-right: 100px;
     margin-bottom: 100px;
 }
