@@ -18,28 +18,28 @@ $(document).ready(function () {
         // console.log(snapshot);
         console.log(snapshotToArray(snapshot));
 
-    
+
 
         function snapshotToArray(snapshot) {
             var returnArr = [];
-        
-            snapshot.forEach(function(childSnapshot) {
+
+            snapshot.forEach(function (childSnapshot) {
                 var item = childSnapshot.val();
                 item.key = childSnapshot.key;
-        
+
                 returnArr.push(item);
             });
-        
+
             return returnArr;
-           
+
         };
 
         bandArray = snapshotToArray(snapshot)
 
-        for(var i = 0; i < bandArray.length; i++) {
+        for (var i = 0; i < bandArray.length; i++) {
             $("#history").prepend("<a class='dropdown-item'>" + bandArray[i] + "</a>");
         }
-        
+
 
     })
 
@@ -63,21 +63,21 @@ $(document).ready(function () {
             url: queryURL,
             method: "GET"
         }).then(function (response) {
-           
+
 
             var videoId1 = "https://www.youtube.com/embed/" + response.items[0].id.videoId;
             $('#youTube').attr('src', videoId1);
             var videoId2 = "https://www.youtube.com/embed/" + response.items[1].id.videoId;
             var videoId3 = "https://www.youtube.com/embed/" + response.items[2].id.videoId;
-            
 
-            $("#next").on("click", function() {
+
+            $("#next").on("click", function () {
                 console.log(videoId1);
                 console.log($('#youTube').attr('src'))
 
                 if (videoId1 === $('#youTube').attr('src')) {
                     $('#youTube').attr('src', videoId2)
-                } else if 
+                } else if
                 (videoId2 === $('#youTube').attr('src')) {
                     $('#youTube').attr('src', videoId3)
                 } else if
@@ -87,23 +87,23 @@ $(document).ready(function () {
                     return;
             })
 
-            $("#previous").on("click", function() {
+            $("#previous").on("click", function () {
                 if (videoId3 === $('#youTube').attr('src')) {
                     $('#youTube').attr('src', videoId2)
-                } else if 
+                } else if
                 (videoId2 === $('#youTube').attr('src')) {
                     $('#youTube').attr('src', videoId1)
-                } else if 
+                } else if
                 (videoId1 === $('#youTube').attr('src')) {
                     $('#youTube').attr('src', videoId3)
                 } else
                     return;
 
             })
-           
+
         })
 
-        
+
         // search()
         var apiKeyTm = "ABJmmwT5erF9dGVuWEGiEhDZNsQojazj";
         var queryURLTm =
@@ -119,7 +119,7 @@ $(document).ready(function () {
             url: queryURLTm,
             method: "GET"
         }).done(function (json) {
-            
+
             var events = json._embedded.events;
 
             $(".is-success").empty();
@@ -127,7 +127,7 @@ $(document).ready(function () {
             var bandImage = events[0].images[0].url;
             $(".is-success").append("<p><h1>" + bandName + "</h1></p>");
             $(".is-success").append("<img src= " + bandImage + ">");
-            for (var i = 0; i < events.length; i++) {
+            for (var i = 0; i < 6; i++) {
 
 
 
@@ -138,7 +138,7 @@ $(document).ready(function () {
                 var venueState = events[i]._embedded.venues[0].state.name;
                 var venueCountry = events[i]._embedded.venues[0].country.name;
                 var seatMap = events[i].url;
-                
+
 
                 $(".is-success").append("<p>Venue: " + venue + "</p>");
                 $(".is-success").append("<p>Date: " + date + "</p>");
@@ -180,7 +180,26 @@ $(document).ready(function () {
     });
 })
 
-    
+function myFunction() {
+    document.getElementById("history").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function (event) {
+    if (!event.target.matches('.dropbtn')) {
+
+        var dropdowns = document.getElementsByClassName("dropdown-menu");
+        var i;
+        for (i = 0; i < 4; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+
+
 
 
 
